@@ -3,10 +3,61 @@
     <string name="about_sangathan">
         "SHIV KRIPA YUVA SANGATHAN \n\n\n\n"
 
-    "SKYS is a registered
-        Non Governmental Organisation NGO ​working together with Partners and
-​        Local Communities in India
-​        Globally to improve  our society"
+   "SHIV KRIPA YUVA SANGATHAN \n\n\n\n"
+
+ " SKYS is a registered
+ Non Governmental Organisation with registration number 01610
+         This NGO established working together with Partners and
+ Local Communities in India
+ Globally to improve our society
+
+ This NGO basically provide the solution for social problems
+ we always take initiation for to resolve social the problems
+ we have the team for expert and very kind peoples, they are honest
+ for their work .
+ we are working for helpless peoples , poor families , dependent children
+ and dependent womens in Sonepat city
+
+ We provide free education to poor children with the help of high qualified teacher.
+ This education classe make each student more innovative and they develop their personality
+ basically we provide English,Maths,Science and Computer class
+
+
+ There are yoga classes in morning , which are delivered by high professionist instructors
+ and the main target for yoga classes are to create optimist society with
+ healthy mental and healthy physical environment
+
+ We also try to involve in the hands-on teaching and care-giving,
+ as well as the administration and general management of the organization.
+ In this way, we aim to give you a better understanding about issues
+
+ Every year volunteers from management and social work institutions comes
+ into the organization and serve their services. We have many opportunities
+ for volunteers.
+
+
+
+ If anyone is interested or talented in a specific area, we most likely can use him or her.
+ At SYKS we try to give practical exposure to our volunteers on the various social issues.
+
+
+ When you volunteer with us, we ask that you get involved in all aspects of our ongoing
+ projects. We will assess your skill set and involve you as per your
+ interest and capacities.
+
+
+ Our Volunteers : If our hopes of building a better and safer world are to become more than
+ wishful thinking, we will need the engagement of volunteers more than ever
+
+
+
+ Main head office in Village - Teha, P.O - Ganaur, District - Sonipat,
+ State - Haryana, Country - India
+
+ Contact Us +91 9899206384
+
+
+        "
     </string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
@@ -99,4 +150,8 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="about_us">About Us</string>
+    <string name="title_activity_home_drawer">HomeDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

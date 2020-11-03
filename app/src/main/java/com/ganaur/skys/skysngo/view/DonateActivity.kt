@@ -1,4 +1,4 @@
-package com.ganaur.skys.skysngo
+package com.ganaur.skys.skysngo.view
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -11,10 +11,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import com.ganaur.skys.skysngo.R
 import kotlinx.android.synthetic.main.activity_donate.*
 
 class DonateActivity : AppCompatActivity() {
@@ -44,10 +42,10 @@ class DonateActivity : AppCompatActivity() {
             //Getting the values from the EditTexts
             val amount = et_amount.text.toString()
             val note = "Test  "+et_name.text.toString()
-            val name = "chaman lal"
-//            val upiId = "9899206384@icici"
+            val name = "Chaman"
+            val upiId = "9899206384@icici"
 //            val upiId = "chamankumar44@axisbank"
-            val upiId = "rajesh.panchal5@icici"
+//            val upiId = "rajesh.panchal5@icici"
             payUsingUpi(amount, upiId, name, note)
         }
 

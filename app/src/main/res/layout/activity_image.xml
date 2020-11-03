@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ganaur.skys.skysngo.view.AboutUsActivity">
+    tools:context="com.ganaur.skys.skysngo.view.ImageActivity">
 
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:layout_gravity="center"
+        android:id="@+id/iv_image"
+        tools:ignore="ContentDescription" />
 </android.support.constraint.ConstraintLayout>

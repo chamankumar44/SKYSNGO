@@ -1,46 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context="com.ganaur.skys.skysngo.DonateActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:fillViewport="true"
+    tools:context="com.ganaur.skys.skysngo.view.DonateActivity"
+    >
 
 
-        <EditText
-            android:id="@+id/et_name"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="28dp"
-            android:hint="Your name"
-            android:inputType="textPersonName"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="16dp" />
+        <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+                                 >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SHIV KRIPA YUVA SANGATHAN"
+                    android:id="@+id/tv_label"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_acount_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="A/C Number : 82792200027752 "
+                    app:layout_constraintTop_toBottomOf="@+id/tv_label"
+                    android:textIsSelectable="true"
+                    android:textSize="20sp"
+
+                    tools:ignore="MissingConstraints"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_ifsc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="88dp"
+                    android:layout_marginTop="18dp"
+                    android:text="IFSC Code  :  SYNB0008279 "
+                    android:textIsSelectable="true"
+                    android:textSize="20sp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tv_acount_number"
+
+                    tools:ignore="MissingConstraints" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#333"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="100dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ifsc_code"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="For UPI Transfer "
+                    android:textSize="15sp"
+                        android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+
+
+                    tools:ignore="MissingConstraints"
+          />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your name"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    android:inputType="textPersonName"
+                    tools:ignore="MissingConstraints"
+                     />
 
         <EditText
             android:id="@+id/et_amount"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_name"
             android:hint="Please Enter Amount"
             android:inputType="numberDecimal"
-            app:layout_constraintTop_toBottomOf="@+id/et_name"
-            tools:layout_editor_absoluteX="16dp" />
 
-        <Button
-            android:id="@+id/bt_pay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:enabled="false"
-            android:text="Donate With UPI"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"/>
+
+                <Button
+                    android:id="@+id/bt_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:text="Donate With UPI"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_amount"
+                    app:layout_constraintVertical_bias="0.728"
+                    tools:ignore="MissingConstraints" />
 
         <!--<Button-->
         <!--android:layout_width="wrap_content"-->
@@ -58,3 +138,5 @@
 
 
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
