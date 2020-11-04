@@ -1,22 +1,26 @@
-package com.ganaur.skys.skysngo.view
+package ngo.ganaur.skys.skysngo.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
+
 import android.view.View
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
+
+
+import androidx.appcompat.app.AppCompatActivity
+
 import android.view.Menu
 import android.view.MenuItem
-import com.ganaur.skys.skysngo.R
-import com.ganaur.skys.skysngo.adapter.ImageAdapter
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import ngo.ganaur.skys.skysngo.R
+import ngo.ganaur.skys.skysngo.adapter.ImageAdapter
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -31,8 +35,8 @@ class HomeDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_drawer)
-        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        setSupportActionBar(toolbar)
+//        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+//        setSupportActionBar(toolbar)
 
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
@@ -41,10 +45,10 @@ class HomeDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
         }
 
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
-        val toggle = ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer.addDrawerListener(toggle)
-        toggle.syncState()
+//        val toggle = ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+//        drawer.addDrawerListener(toggle)
+//        toggle.syncState()
 
         val navigationView = findViewById<View>(R.id.nav_view) as NavigationView
         navigationView.setNavigationItemSelectedListener(this)

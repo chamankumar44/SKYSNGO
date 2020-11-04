@@ -1,8 +1,8 @@
-package com.ganaur.skys.skysngo.view
+package ngo.ganaur.skys.skysngo.view
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ganaur.skys.skysngo.R
+import ngo.ganaur.skys.skysngo.R
 
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso
@@ -10,15 +10,12 @@ import kotlinx.android.synthetic.main.activity_image.*
 import android.view.MotionEvent
 import android.graphics.PointF
 import android.graphics.Matrix
-import android.support.v4.app.FragmentActivity
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.view.View.OnTouchListener
-
-
-
-
+import android.widget.Toast
+import com.google.android.gms.ads.*
 
 
 class ImageActivity : AppCompatActivity() {
@@ -38,22 +35,67 @@ class ImageActivity : AppCompatActivity() {
     var oldDist = 1f
     var savedItemClicked: String? = null
 
+    lateinit var mAdView : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image)
 
-        iv_image.setOnTouchListener({ v, event ->
+        iv_image.setOnTouchListener { v, event ->
             onTouch(v,event)
-        })
+        }
 
 
         Picasso.with(this)
-                .load(intent.extras.getString("url"))
+                .load(intent.extras?.getString("url"))
                 .fit()
                 .placeholder(R.drawable.skys)
                 .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
                 .into(iv_image)
+
+
+
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+//        mAdView.adUnitId = "ca-app-pub-8118826265420904/6697271721"
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
+
+
+//        mAdView.adListener = object: AdListener() {
+//            override fun onAdLoaded() {
+//            Toast.makeText(applicationContext,"onAdLoaded",Toast.LENGTH_SHORT).show()
+//            }
+//
+//            override fun onAdFailedToLoad(adError : LoadAdError) {
+//                Toast.makeText(applicationContext,"onAdFailedToLoad",Toast.LENGTH_SHORT).show()
+//            }
+//
+//            override fun onAdOpened() {
+//                Toast.makeText(applicationContext,"onAdOpened",Toast.LENGTH_SHORT).show()
+//                // Code to be executed when an ad opens an overlay that
+//                // covers the screen.
+//            }
+//
+//            override fun onAdClicked() {
+//                Toast.makeText(applicationContext,"onAdClicked",Toast.LENGTH_SHORT).show()
+//                // Code to be executed when the user clicks on an ad.
+//            }
+//
+//            override fun onAdLeftApplication() {
+//                Toast.makeText(applicationContext,"onAdLeftApplication",Toast.LENGTH_SHORT).show()
+//                // Code to be executed when the user has left the app.
+//            }
+//
+//            override fun onAdClosed() {
+//                Toast.makeText(applicationContext,"onAdClosed",Toast.LENGTH_SHORT).show()
+//                // Code to be executed when the user is about to return
+//                // to the app after tapping on an ad.
+//            }
+//        }
 
     }
 
@@ -148,5 +190,7 @@ class ImageActivity : AppCompatActivity() {
         val y = event.getY(0) + event.getY(1)
         point.set(x / 2, y / 2)
     }
+
+
 
 }

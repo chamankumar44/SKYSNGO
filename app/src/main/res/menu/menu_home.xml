@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.ganaur.skys.skysngo.view.HomeActivity">
+    tools:context="ngo.ganaur.skys.skysngo.view.HomeActivity">
     <item
         android:id="@+id/about_us"
         android:orderInCategory="100"

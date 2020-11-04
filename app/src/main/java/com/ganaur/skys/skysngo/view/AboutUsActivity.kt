@@ -1,8 +1,8 @@
-package com.ganaur.skys.skysngo.view
+package ngo.ganaur.skys.skysngo.view
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ganaur.skys.skysngo.R
+import ngo.ganaur.skys.skysngo.R
 
 class AboutUsActivity : AppCompatActivity() {
 

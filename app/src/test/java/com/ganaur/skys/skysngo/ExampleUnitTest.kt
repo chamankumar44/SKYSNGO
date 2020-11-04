@@ -1,4 +1,4 @@
-package com.ganaur.skys.skysngo
+package ngo.ganaur.skys.skysngo
 
 import org.junit.Test
 

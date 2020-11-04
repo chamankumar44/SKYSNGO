@@ -1,4 +1,4 @@
-package com.ganaur.skys.skysngo.view
+package ngo.ganaur.skys.skysngo.view
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -6,13 +6,13 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.Toast
-import com.ganaur.skys.skysngo.R
+import ngo.ganaur.skys.skysngo.R
 import kotlinx.android.synthetic.main.activity_donate.*
 
 class DonateActivity : AppCompatActivity() {
@@ -131,7 +131,7 @@ class DonateActivity : AppCompatActivity() {
                     val trxt = data.getStringExtra("response")
                     Log.d("UPI", "onActivityResult: $trxt")
                     val dataList = ArrayList<String>()
-                    dataList.add(trxt)
+                    trxt?.let { dataList.add(it) }
                     upiPaymentDataOperation(dataList)
                 } else {
                     Log.d("UPI", "onActivityResult: " + "Return data is null")

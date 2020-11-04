@@ -1,14 +1,17 @@
-package com.ganaur.skys.skysngo.adapter
+package ngo.ganaur.skys.skysngo.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.widget.CardView
-import android.support.v7.widget.RecyclerView
+import android.icu.number.NumberFormatter.with
+import android.icu.number.NumberRangeFormatter.with
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ganaur.skys.skysngo.view.ImageActivity
-import com.ganaur.skys.skysngo.R
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
+import ngo.ganaur.skys.skysngo.view.ImageActivity
+import ngo.ganaur.skys.skysngo.R
 import com.squareup.picasso.Callback
 import com.squareup.picasso.MemoryPolicy
 import com.squareup.picasso.Picasso

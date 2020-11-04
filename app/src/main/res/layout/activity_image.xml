@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ganaur.skys.skysngo.view.ImageActivity">
+    tools:context="ngo.ganaur.skys.skysngo.view.ImageActivity">
 
 
     <ImageView
@@ -13,5 +13,19 @@
         android:scaleType="matrix"
         android:layout_gravity="center"
         android:id="@+id/iv_image"
+        android:visibility="visible"
         tools:ignore="ContentDescription" />
-</android.support.constraint.ConstraintLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-8118826265420904/6697271721"
+        tools:ignore="MissingConstraints"
+     >
+
+    </com.google.android.gms.ads.AdView>
+</androidx.constraintlayout.widget.ConstraintLayout>
