@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "326377603069",
+    "firebase_url": "https://skysngo.firebaseio.com",
+    "project_id": "skysngo",
+    "storage_bucket": "skysngo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326377603069:android:783b823ccf69d23ed26394",
+        "android_client_info": {
+          "package_name": "ngo.ganaur.skys.skysngo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326377603069-03rmk87hkfqv7nqomu122oeabs4lpi80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ngo.ganaur.skys.skysngo",
+            "certificate_hash": "df7601b2da54cba6d585f867f6216cca4e5699aa"
+          }
+        },
+        {
+          "client_id": "326377603069-dls0k9btf4la51svkena332s8najagik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7kbQ4CMOGjMjIVeOk44BHqpF-_oQVJEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326377603069-dls0k9btf4la51svkena332s8najagik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

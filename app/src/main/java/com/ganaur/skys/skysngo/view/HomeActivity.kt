@@ -2,13 +2,17 @@ package ngo.ganaur.skys.skysngo.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 import ngo.ganaur.skys.skysngo.R
 import ngo.ganaur.skys.skysngo.adapter.ImageAdapter
 import kotlinx.android.synthetic.main.activity_home.*
@@ -33,8 +37,28 @@ class HomeActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             donateActivityIntent()
         }
+        tokenRequest ()
     }
 
+
+    fun tokenRequest (){
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+//                Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+                Toast.makeText(baseContext, "Token Request Fialed ", Toast.LENGTH_SHORT).show()
+                return@OnCompleteListener
+            }
+
+            // Get new FCM registration token
+            val token = task.result
+
+            // Log and toast
+            val msg = getString(R.string.msg_token_fmt, token)
+//            Log.d(TAG, msg)
+            Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+        })
+    }
 
 
 
