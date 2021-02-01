@@ -16,10 +16,20 @@ android {
         multiDexEnabled  true
     }
     buildTypes {
-        release {
+
+        debug {
+
+            debuggable true
             minifyEnabled false
-//            shrinkResources true
+            shrinkResources false
+        }
+        release {
+
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            useProguard true
         }
     }
 
@@ -70,4 +80,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
+
+    // For banners
+    implementation('com.mopub:mopub-sdk-banner:+@aar') {
+        transitive = true
+    }
+
+    // For interstitials
+    implementation('com.mopub:mopub-sdk-interstitial:+@aar') {
+        transitive = true
+    }
 }

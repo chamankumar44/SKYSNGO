@@ -6,27 +6,24 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.Toast
-import ngo.ganaur.skys.skysngo.R
+import androidx.appcompat.app.AppCompatActivity
+import com.mopub.common.MoPub
+import com.mopub.common.SdkConfiguration
+import com.mopub.mobileads.MoPubErrorCode
+import com.mopub.mobileads.MoPubInterstitial
+import com.mopub.mobileads.MoPubView
+import com.mopub.mobileads.MoPubView.MoPubAdSize
 import kotlinx.android.synthetic.main.activity_donate.*
+import ngo.ganaur.skys.skysngo.R
 
-class DonateActivity : AppCompatActivity() {
 
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_donate)
-    }
-*/
-//    lateinit var amountEt: EditText
-//    lateinit var noteEt: EditText
-//    lateinit var nameEt: EditText
-//    lateinit var upiIdEt: EditText
-//    lateinit var send: Button
+class DonateActivity : AppCompatActivity() , MoPubView.BannerAdListener {
+
      var name : String = ""
      var amount : String =""
 
@@ -35,6 +32,7 @@ class DonateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donate)
+
 
 
 
@@ -50,6 +48,21 @@ class DonateActivity : AppCompatActivity() {
         }
 
         checkForNameAndAmountLenght()
+    }
+
+
+    fun loadMoPubads(){
+
+//        mopub_add.setAdUnitId('YOUR_AD_UNIT_ID');
+//        mopub_add.setAdSize(MoPubAdSize); // Call this if you want to set an ad size programmatically
+//        mopub_add.loadAd();
+//        mopub_add.setBannerAdListener(this);
+//        mopub_add.setBannerAdListener(this);
+//
+//        val mInterstitial: MoPubInterstitial
+//        mInterstitial = MoPubInterstitial(this, AD_UNIT_ID)
+//        mInterstitial.setInterstitialAdListener(this);
+
     }
 
     fun checkForNameAndAmountLenght(){
@@ -199,6 +212,40 @@ class DonateActivity : AppCompatActivity() {
             }
             return false
         }
+    }
+//
+//    fun loadMopubAdd(){
+//
+//        mopub_add.setAdUnitId("xxxxxxxxxxx"); // Enter your Ad Unit ID from www.mopub.com
+//        mopub_add.setAdSize(MoPubAdSize); // Call this if you are not setting the ad size in XML or wish to use an ad size other than what has been set in the XML. Note that multiple calls to `setAdSize()` will override one another, and the MoPub SDK only considers the most recent one.
+//        mopub_add.loadAd(MoPubAdSize); // Call this if you are not calling setAdSize() or setting the size in XML, or if you are using the ad size that has not already been set through either setAdSize() or in the XML
+//        mopub_add.loadAd();
+//
+//
+//        val configBuilder = SdkConfiguration.Builder("YOUR_AD_UNIT_ID")
+//
+//        MoPub.initializeSdk(this, configBuilder.build(), initSdkListener())
+//
+//    }
+
+    override fun onBannerExpanded(banner: MoPubView?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onBannerLoaded(banner: MoPubView) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onBannerCollapsed(banner: MoPubView?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onBannerFailed(banner: MoPubView?, errorCode: MoPubErrorCode?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onBannerClicked(banner: MoPubView?) {
+        TODO("Not yet implemented")
     }
 }
 

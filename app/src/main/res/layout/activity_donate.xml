@@ -119,22 +119,18 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_amount"
-                    app:layout_constraintVertical_bias="0.728"
+                    app:layout_constraintVertical_bias="0.492"
                     tools:ignore="MissingConstraints" />
 
-        <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!---->
-        <!--android:text="Donate With GooglePay"-->
-        <!--/>-->
+                <com.mopub.mobileads.MoPubView
+                    android:id="@+id/mopub_add"
+                    android:layout_width='320dp'
+                    android:layout_height='50dp'
+                    app:moPubAdSize='match_view'
 
+                    tools:ignore="MissingConstraints">
 
-        <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Donate With Paytm"-->
-        <!--/>-->
+                </com.mopub.mobileads.MoPubView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

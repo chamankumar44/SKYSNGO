@@ -56,7 +56,7 @@ class ImageActivity : AppCompatActivity() {
 
 
 
-        MobileAds.initialize(this) {}
+        MobileAds.initialize(this)
 
         mAdView = findViewById(R.id.adView)
 //        mAdView.adUnitId = "ca-app-pub-8118826265420904/6697271721"

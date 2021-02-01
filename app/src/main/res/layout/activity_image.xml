@@ -23,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-8118826265420904/6697271721"
+        app:adUnitId="ca-app-pub-8118826265420904~5741614404"
         tools:ignore="MissingConstraints"
      >
 

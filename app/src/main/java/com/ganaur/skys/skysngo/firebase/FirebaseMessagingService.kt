@@ -43,53 +43,11 @@ import java.net.URL
 public open class MyFirebaseMessagingService  : FirebaseMessagingService(){
 
 
-    fun abc(){
 
-
-
-
-//        runOnUiThread({
-//            Log.i(TAG, "This is run")
-//            object : Runnable {                    // This whole expression
-//                override fun run() {               // returns an object which
-//                    Log.i(TAG, "runOnUiThread")    // is a Runnable, but does
-//                }                                  // not at any point invoke
-//            }                                      // its "run" method
-//            Log.i(TAG, "And so is this")
-//        })
-//
-
-
-
-
-//        Handler
-//        Handler mainHandler = new Handler(context.getMainLooper());
-//
-//        Runnable myRunnable = new Runnable() {
-//            @Override
-//            public void run() {....} // This is your code
-//        };
-//        mainHandler.post(myRunnable);
+    override fun handleIntentOnMainThread(p0: Intent?): Boolean {
+        return super.handleIntentOnMainThread(p0)
     }
-
-    /**
-     * Called when message is received.
-     *
-     * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
-     */
-    // [START receive_message]
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
-
-
-
-        val handler =  Handler(getMainLooper())
-        val r =Runnable {
-            val intent = Intent(this, HomeActivity::class.java)
-            intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-        }
-        handler.post(r)
-
 
         if (remoteMessage.data.isNotEmpty()) {
             Log.d(TAG, "Message data payload: ${remoteMessage.data}")
@@ -102,6 +60,19 @@ public open class MyFirebaseMessagingService  : FirebaseMessagingService(){
                 handleNow()
             }
         }
+
+
+
+//        val handler =  Handler(getMainLooper())
+//        val r =Runnable {
+//            val intent = Intent(this, HomeActivity::class.java)
+//            intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
+//            startActivity(intent)
+//        }
+//        handler.post(r)
+
+
+
 
         // [START_EXCLUDE]
         // There are two types of messages data messages and notification messages. Data messages are handled
@@ -232,13 +203,13 @@ public open class MyFirebaseMessagingService  : FirebaseMessagingService(){
         Log.d(TAG, "onTaskRemoved")
     }
 
-    override fun handleIntentOnMainThread(p0: Intent?): Boolean {
-        Log.d(TAG, "handleIntentOnMainThread")
-        val intent = Intent(this, HomeActivity::class.java)
-        intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
-        return super.handleIntentOnMainThread(p0)
-    }
+//    override fun handleIntentOnMainThread(p0: Intent?): Boolean {
+//        Log.d(TAG, "handleIntentOnMainThread")
+//        val intent = Intent(this, HomeActivity::class.java)
+//        intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
+//        startActivity(intent)
+//        return super.handleIntentOnMainThread(p0)
+//    }
 
     override fun onTrimMemory(level: Int) {
         super.onTrimMemory(level)

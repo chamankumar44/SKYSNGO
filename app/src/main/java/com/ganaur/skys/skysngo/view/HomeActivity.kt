@@ -37,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             donateActivityIntent()
         }
-        tokenRequest ()
+//        tokenRequest ()
     }
 
 
