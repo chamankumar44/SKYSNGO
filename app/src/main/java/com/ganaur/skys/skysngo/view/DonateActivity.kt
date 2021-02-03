@@ -12,6 +12,10 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.InterstitialAd;
 import com.mopub.common.MoPub
 import com.mopub.common.SdkConfiguration
 import com.mopub.mobileads.MoPubErrorCode
@@ -29,11 +33,36 @@ class DonateActivity : AppCompatActivity() , MoPubView.BannerAdListener {
 
     internal val UPI_PAYMENT = 0
 
+    private lateinit var mInterstitialAd: InterstitialAd
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donate)
 
+        MobileAds.initialize(this) {
+            mInterstitialAd = InterstitialAd(this);
+            mInterstitialAd.adUnitId = "ca-app-pub-8118826265420904/7221057852"
+            mInterstitialAd.loadAd(AdRequest.Builder().build())
 
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            }
+
+        }
+
+        mInterstitialAd = InterstitialAd(this);
+        mInterstitialAd.adUnitId = "ca-app-pub-8118826265420904/7221057852"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+
+        mInterstitialAd.adListener = object : AdListener() {
+            override fun onAdClosed() {
+                mInterstitialAd.loadAd(AdRequest.Builder().build())
+            }
+        }
+
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        }
 
 
         bt_pay.setOnClickListener {
