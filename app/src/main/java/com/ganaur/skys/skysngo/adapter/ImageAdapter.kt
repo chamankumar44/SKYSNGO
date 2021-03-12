@@ -50,7 +50,6 @@ class ImageAdapter(val mContext: Context,private val myDataset: ArrayList<String
                 .load(imageUrl)
                 .fit()
                 .placeholder(R.drawable.skys)
-                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
                 .into(holder.cardView.card_image ,  object : Callback {
                     override fun onSuccess() {
                         holder.cardView. progress_image. visibility = View.GONE

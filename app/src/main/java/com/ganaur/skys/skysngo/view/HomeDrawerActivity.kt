@@ -67,7 +67,7 @@ class HomeDrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
     fun loadArrayList() {
         for (i in 0 until 58) {
             dataList.add(("http://test.bluequator.com".plus(
-                    "/my/skys/images/img").plus(String.format("%02d", i)).plus(".jpg")))
+                    "/skys_images/skys_img/img").plus(String.format("%02d", i)).plus(".jpg")))
 
         }
     }

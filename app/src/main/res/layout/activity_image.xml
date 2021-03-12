@@ -23,9 +23,22 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-8118826265420904~5741614404"
+        app:adUnitId="ca-app-pub-8118826265420904/7221057852"
         tools:ignore="MissingConstraints"
-     >
+     />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-8118826265420904/2160302868"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="621dp">
 
     </com.google.android.gms.ads.AdView>
 </androidx.constraintlayout.widget.ConstraintLayout>
