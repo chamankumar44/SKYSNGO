@@ -36,6 +36,7 @@ class ImageActivity : AppCompatActivity() {
     var savedItemClicked: String? = null
 
     lateinit var mAdView : AdView
+    lateinit var mAdViewTwo : AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,9 +60,12 @@ class ImageActivity : AppCompatActivity() {
         MobileAds.initialize(this)
 
         mAdView = findViewById(R.id.adView)
+        mAdViewTwo = findViewById(R.id.adView_two)
 //        mAdView.adUnitId = "ca-app-pub-8118826265420904/6697271721"
         val adRequest = AdRequest.Builder().build()
+        val adRequestTwo = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
+        mAdViewTwo.loadAd(adRequestTwo)
 
 
 

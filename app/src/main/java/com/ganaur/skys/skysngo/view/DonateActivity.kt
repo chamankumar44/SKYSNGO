@@ -16,17 +16,17 @@ import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.InterstitialAd;
-import com.mopub.common.MoPub
-import com.mopub.common.SdkConfiguration
-import com.mopub.mobileads.MoPubErrorCode
-import com.mopub.mobileads.MoPubInterstitial
-import com.mopub.mobileads.MoPubView
-import com.mopub.mobileads.MoPubView.MoPubAdSize
+//import com.mopub.common.MoPub
+//import com.mopub.common.SdkConfiguration
+//import com.mopub.mobileads.MoPubErrorCode
+//import com.mopub.mobileads.MoPubInterstitial
+//import com.mopub.mobileads.MoPubView
+//import com.mopub.mobileads.MoPubView.MoPubAdSize
 import kotlinx.android.synthetic.main.activity_donate.*
 import ngo.ganaur.skys.skysngo.R
 
 
-class DonateActivity : AppCompatActivity() , MoPubView.BannerAdListener {
+class DonateActivity : AppCompatActivity()  {
 
      var name : String = ""
      var amount : String =""
@@ -257,25 +257,25 @@ class DonateActivity : AppCompatActivity() , MoPubView.BannerAdListener {
 //
 //    }
 
-    override fun onBannerExpanded(banner: MoPubView?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onBannerLoaded(banner: MoPubView) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onBannerCollapsed(banner: MoPubView?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onBannerFailed(banner: MoPubView?, errorCode: MoPubErrorCode?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onBannerClicked(banner: MoPubView?) {
-        TODO("Not yet implemented")
-    }
+//    override fun onBannerExpanded(banner: MoPubView?) {
+//        TODO("Not yet implemented")
+//    }
+//
+//    override fun onBannerLoaded(banner: MoPubView) {
+//        TODO("Not yet implemented")
+//    }
+//
+//    override fun onBannerCollapsed(banner: MoPubView?) {
+//        TODO("Not yet implemented")
+//    }
+//
+//    override fun onBannerFailed(banner: MoPubView?, errorCode: MoPubErrorCode?) {
+//        TODO("Not yet implemented")
+//    }
+//
+//    override fun onBannerClicked(banner: MoPubView?) {
+//        TODO("Not yet implemented")
+//    }
 }
 
 
